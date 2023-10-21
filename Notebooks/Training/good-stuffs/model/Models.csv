@@ -1,0 +1,7 @@
+﻿Model,Model Type,Features,FalsePositives, FalseNegatives,True Positives,True Negatives
+nn-128-all-features-rel,Neural network,All features with relative location and velocity,2063,179,450765,448881
+nn-128-all-features,Neural network,"All features with specific coordinates (X, Y, Z) for location and velocity ",12023,1709,449235,438921
+nn-128-selected-features,Neural network,With only selection features from CFS,1536,101,450843,449480
+random-forest-128-all-features-rel,Random forest,All features with relative location and velocity,2112,62,450882,448832
+random-forest-128-all-features,Random forest,"All features with specific coordinates (X, Y, Z) for location and velocity ",179770,3209,447735,271174
+random-forest-128-selected-features,Random forest,With only selection features from CFS,2818,39,450905,448126
