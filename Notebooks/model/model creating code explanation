@@ -1,0 +1,12 @@
+Firstly all the necessary libraries were imported.
+Then the code determines the number of features in the data by getting the number of columns and subtracting 2, which are 'pair' and 'will_merge' columns.
+A sequential model is created using Keras Sequential API. This model consists of an input layer with 128 neurons, two hidden layers with 64 and 32 neurons respectively, 
+and an output layer with 1 neuron. Between each pair of layers, a dropout layer is added to prevent overfitting by randomly setting a fraction (0.5) of the input units to 0 at each update during training time.
+The model is then compiled with a binary cross-entropy loss function, the Adam optimizer, and accuracy as a metric to keep track of during training.
+Then i feel that summarising the model was necessary as ,this prints a summary representation of the model.
+Callbacks are utility functions applied at given stages of the training procedure. Here two callbacks, ModelCheckpoint and EarlyStopping are defined. 
+ModelCheckpoint saves the best model as determined by maximum validation accuracy. EarlyStopping stops training when the validation loss is not improving for a certain number of epochs (patience).
+The feature matrix X and the target vector y are defined. X is the data without 'pair' and 'will_merge' columns and y is the 'will_merge' column.
+Then the dataset is split into a training set and a test set, with 80% of the data used for training and the remaining 20% for testing.
+The model is trained using the training data with a batch size of 32, for a maximum of 100 epochs, though it could stop early if the EarlyStopping condition is met.
+Then finally the trained model is evaluated on the test set and the accuracy is printed.
